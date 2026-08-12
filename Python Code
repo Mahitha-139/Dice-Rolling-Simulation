@@ -1,0 +1,24 @@
+import random
+
+def roll_dice():
+    # Generate a random integer between 1 and 6
+    return random.randint(1, 6)
+
+def main():
+    print("🎲 Welcome to the Dice Rolling Simulator! 🎲")
+    
+    # This loop keeps running until the user decides to exit
+    while True:
+        user_input = input("\nPress 'Enter' to roll the dice (or type 'exit' to quit): ").strip().lower()
+        
+        if user_input == 'exit':
+            print("Thanks for playing! Goodbye! 👋")
+            break  # Stops the loop and ends the program
+            
+        # Roll the dice and display the result
+        result = roll_dice()
+        print(f"You rolled a: {result}")
+
+# This line ensures the program runs when you execute the script
+if __name__ == "__main__":
+    main()
